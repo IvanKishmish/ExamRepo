@@ -5,6 +5,7 @@ obj/
 # User-specific files
 .vscode/
 .idea/
+.vs/
 
 # .env files (якщо не хочете, щоб ці файли потрапляли в git)
 .env
