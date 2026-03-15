@@ -17,3 +17,6 @@ Console.WriteLine($"Total files found: {files.Length}");
 
 //====================================================================================2 commit
 
+Dictionary<string, string> hashes = new Dictionary<string, string>();
+
+//=====================================================================================3 commit
