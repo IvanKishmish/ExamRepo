@@ -48,3 +48,14 @@ foreach (string file in files)
 Console.WriteLine("Scan finished.");
 
 //======================================================================4 commit
+
+string GetFileHash(string filePath)
+{
+    using FileStream stream = File.OpenRead(filePath);
+    using SHA256 sha = SHA256.Create();
+
+    byte[] hash = sha.ComputeHash(stream);
+
+    return BitConverter.ToString(hash).Replace("-", "");
+}
+//========================================================================5 commit
