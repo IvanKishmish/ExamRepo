@@ -12,4 +12,8 @@ if(!Directory.Exists(folder))
 }
 //=======================================================================1 commit
 
+string[] files = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
+Console.WriteLine($"Total files found: {files.Length}");
+
+//====================================================================================2 commit
 
