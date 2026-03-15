@@ -20,3 +20,31 @@ Console.WriteLine($"Total files found: {files.Length}");
 Dictionary<string, string> hashes = new Dictionary<string, string>();
 
 //=====================================================================================3 commit
+
+foreach (string file in files)
+{
+    try
+    {
+        string hash = GetFileHash(file);
+
+        if (hashes.ContainsKey(hash))
+        {
+            Console.WriteLine("Duplicate found:");
+            Console.WriteLine(file);
+            Console.WriteLine("Duplicate of:");
+            Console.WriteLine(hashes[hash]);
+            Console.WriteLine();
+        }
+        else
+        {
+            hashes[hash] = file;
+        }
+    }
+    catch
+    {
+        Console.WriteLine("Cannot read file: " + file);
+    }
+}
+Console.WriteLine("Scan finished.");
+
+//======================================================================4 commit
